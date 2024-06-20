@@ -11,7 +11,7 @@ const arg = process.argv.slice(2);
 const num = arg.sort();
 
 if (arg.length <= 2) {
-  console.log(0);
+  console.log('0');
 } else {
   console.log(num[num.length - 2]);
 }
