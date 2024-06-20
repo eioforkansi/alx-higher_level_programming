@@ -15,7 +15,7 @@ if (isNaN(num)) {
   for (let i = 0; i < num; i++) {
     let result = '';
     for (let z = 0; z < num; z++) {
-      result += 'x';
+      result += 'X';
     }
     console.log(result);
   }
