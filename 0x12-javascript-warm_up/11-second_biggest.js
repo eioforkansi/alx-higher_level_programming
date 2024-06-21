@@ -8,10 +8,11 @@
  */
 
 const arg = process.argv.slice(2);
-const num = arg.sort();
 
 if (arg.length <= 2) {
-  console.log('0');
+  console.log(0);
 } else {
+  const mapped = arg.map(Number);
+  const num = mapped.sort((a, b) => a - b);
   console.log(num[num.length - 2]);
 }
