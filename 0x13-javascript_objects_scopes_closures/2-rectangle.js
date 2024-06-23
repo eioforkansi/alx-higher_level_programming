@@ -9,7 +9,7 @@
 
 */
 
-module.exports = class Rectange {
+module.exports = class Rectangle {
   constructor (w, h) {
     if (!(Number.isInteger(w) && w > 0) || !(Number(h) && h > 0)) {
       //
