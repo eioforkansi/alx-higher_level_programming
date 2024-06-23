@@ -9,7 +9,7 @@
 
 */
 
-class Rectange {
+module.exports = class Rectange {
   constructor (w, h) {
     if (!(Number.isInteger(w) && w > 0) || !(Number(h) && h > 0)) {
       //
@@ -18,6 +18,4 @@ class Rectange {
       this.height = h;
     }
   }
-}
-
-module.exports = Rectange;
+};
