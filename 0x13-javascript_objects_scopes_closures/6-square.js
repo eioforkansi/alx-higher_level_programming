@@ -17,8 +17,8 @@ module.exports = class Square extends SquareOriginal {
   charPrint (c) {
     if (c === undefined) {
       this.print();
-    } else if (c.toUpperCase() === 'C') {
-      for (let i = 0; i < this.size; i++) { console.log('c'.repeat(this.size)); }
+    } else {
+      for (let i = 0; i < this.size; i++) { console.log(c.repeat(this.size)); }
     }
   }
 };
