@@ -14,10 +14,10 @@ module.exports = class Square extends SquareOriginal {
     this.size = size;
   }
 
-  charPrint (input) {
-    if (input === undefined) {
+  charPrint (c) {
+    if (c === undefined) {
       this.print();
-    } else if (input === 'C') {
+    } else if (c.toUpperCase() === 'C') {
       for (let i = 0; i < this.size; i++) { console.log('C'.repeat(this.size)); }
     }
   }
