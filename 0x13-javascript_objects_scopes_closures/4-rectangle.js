@@ -5,7 +5,9 @@
  * The constructor takes 2 arguments: w and h
  * If w or h is equal to 0 or not a positive integer, create an empty object
  * The method called print(), prints the rectangle using the character X
- */
+* The method called rotate(), exchanges the width and the height of the rectangle
+* The method called double(), multiples the width and the height of the rectangle by 2
+*/
 
 module.exports = class Rectangle {
   constructor (w, h) {
