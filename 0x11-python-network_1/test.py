@@ -1,21 +1,17 @@
 #!/usr/bin/python3
-"""Python script that:
+#!/usr/bin/python3
+"""A script that:
 - takes in a URL,
-- sends a request to the URL
-- displays the body of the response (decoded in utf-8).
+- sends a request to the URL and displays the value
+- of the X-Request-Id variable found in the header ofthe response.
 """
 
 import sys
-import urllib.request
-import urllib.error
+import requests
 
 if __name__ == "__main__":
     url = sys.argv[1]
+    data = {"email": sys.argv[2]}
 
-    try:
-        request = urllib.request.Request(url)
-        with urllib.request.urlopen(request) as response:
-            body = response.read().decode('utf-8')
-            print(body)
-    except urllib.error.HTTPError as e:
-        print(f"Error code: {e.code}")
+    response = request.post(url, data)
+    print(response.text)
