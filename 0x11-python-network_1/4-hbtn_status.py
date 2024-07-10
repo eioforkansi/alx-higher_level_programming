@@ -4,7 +4,11 @@ import requests
 
 
 if __name__ == "__main__":
-    r = requests.get("https://intranet.hbtn.io/status")
+    url = "https://intranet.hbtn.io/status"
+    response = requests.get(url)
+
+    body = response.text
+
     print("Body response:")
-    print("\t- type: {}".format(type(r.text)))
-    print("\t- content: {}".format(r.text))
+    print(f"\t- type: {type(body)}")
+    print(f"\t- content: {body}")
