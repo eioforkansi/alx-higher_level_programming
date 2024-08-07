@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+if [ $#  -ne 1 ]; then
+    echo "Usage: <commit message>"
+    exit 1
+fi
+
+git add .; git commit -m $1;
+
+if [ $? -ne 0 ]; then
+    echo "Successfully added, commited and pushed changes to Github"
+    exit 1
+fi
+
+git push;
+echo "Successfully added, commited and pushed changes to Github"
+
