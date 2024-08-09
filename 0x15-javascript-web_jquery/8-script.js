@@ -4,10 +4,13 @@ $(document).ready(function() {
         method: 'GET',
         success: function(data) {
             const movies = data.results;
-            let i = 0;
-            for (i = 0; i < movies.length(); i++) {
-                $("#character").append("<li>movies.name")
+            let i;
+            for (i = 0; i < movies.length; i++) {
+                $("#list_movies").append("<li>" + movies[i].title + "</li>");
             }
+        },
+        error: function(error) {
+            console.error('Error fetching movies:', error);
         }
-    })
-})
+    });
+});
